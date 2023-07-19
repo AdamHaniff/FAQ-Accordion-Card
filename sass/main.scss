@@ -32,9 +32,93 @@ html {
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
 }
 
+// ********* MOBILE LAYOUT *********
 body {
-  // padding at bottom is 85px
+  display: flex;
+  justify-content: center;
+  padding: 14.8rem 0 8.5rem 0;
+  background: linear-gradient($color-gradient-start, $color-gradient-end);
+  font-family: $font-primary;
+}
+
+// ************** CARD *************
+.card {
+  max-width: 32.7rem;
+  background: $color-card-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13.2rem 2.4rem 4.8rem;
+  border-radius: 2.3rem;
+  box-shadow: 0 5rem 5rem -2rem rgba(53, 18, 122, 0.5);
+  position: relative;
+
+  // ***** CARD IMAGE CONTAINER ****
+  &__image--container {
+    max-width: 23.7rem;
+    max-height: 18rem;
+    position: absolute;
+    top: 0;
+    transform: translateY(-60%);
+
+    &::after {
+      content: "";
+      display: block;
+      background-image: url("../images/bg-pattern-mobile.svg");
+      width: 24rem;
+      height: 14.5rem;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+  }
+
+  // ******** FAQ CONTAINER ********
+  .FAQ {
+    max-width: 27.9rem;
+
+    &__header {
+      color: $color-text-bold;
+      font-size: 3.2rem;
+      font-weight: $font-weight-bold;
+      text-align: center;
+      margin-bottom: 3.8rem;
+    }
+
+    &__QnA-container {
+      border-bottom: 1px solid $color-divider;
+
+      &:not(:last-child) {
+        margin-bottom: 1.9rem;
+      }
+
+      &__icon {
+        margin-left: auto;
+      }
+    }
+
+    &__question-container {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.3rem;
+    }
+
+    &__question {
+      color: $color-question;
+      font-size: 1.3rem;
+    }
+
+    &__answer {
+      color: $color-answer;
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      margin-bottom: 1.6rem;
+    }
+  }
 }
