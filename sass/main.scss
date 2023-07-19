@@ -1,0 +1,40 @@
+// ********** STYLE GUIDE **********
+
+// ************* COLORS ************
+$color-text-bold: hsl(238, 29%, 16%);
+$color-question: hsl(237, 12%, 33%);
+$color-question-hover: hsl(14, 88%, 65%);
+$color-gradient-start: hsl(273, 75%, 66%);
+$color-gradient-end: hsl(240, 73%, 65%);
+$color-answer: hsl(240, 6%, 50%);
+$color-divider: hsl(240, 5%, 91%);
+$color-card-bg: hsl(0, 0%, 100%);
+
+// ********** FONT FAMILY **********
+$font-primary: "Kumbh Sans", sans-serif;
+
+// ********* FONT WEIGHTS **********
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+// ************* BASE **************
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  // padding at bottom is 85px
+}
