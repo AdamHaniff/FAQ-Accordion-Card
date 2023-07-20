@@ -78,47 +78,53 @@ body {
   &__image {
     max-width: 100%;
   }
+}
 
-  // ******** FAQ CONTAINER ********
-  .FAQ {
-    max-width: 27.9rem;
+// ******** FAQ CONTAINER ********
+.FAQ {
+  width: 27.9rem;
 
-    &__header {
-      color: $color-text-bold;
-      font-size: 3.2rem;
-      font-weight: $font-weight-bold;
-      text-align: center;
-      margin-bottom: 3.8rem;
+  &__header {
+    color: $color-text-bold;
+    font-size: 3.2rem;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    margin-bottom: 3.8rem;
+  }
+
+  &__QnA-container {
+    border-bottom: 1px solid $color-divider;
+
+    &:not(:last-child) {
+      margin-bottom: 1.9rem;
     }
 
-    &__QnA-container {
-      border-bottom: 1px solid $color-divider;
-
-      &:not(:last-child) {
-        margin-bottom: 1.9rem;
-      }
-
-      &__icon {
-        margin-left: auto;
-      }
-    }
-
-    &__question-container {
-      display: flex;
-      align-items: center;
-      margin-bottom: 1.3rem;
-    }
-
-    &__question {
-      color: $color-question;
-      font-size: 1.3rem;
-    }
-
-    &__answer {
-      color: $color-answer;
-      font-size: 1.2rem;
-      line-height: 1.8rem;
-      margin-bottom: 1.6rem;
+    &__icon {
+      margin-left: auto;
     }
   }
+
+  &__question-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3rem;
+  }
+
+  &__question {
+    color: $color-question;
+    font-size: 1.3rem;
+  }
+
+  &__answer {
+    color: $color-answer;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    margin-bottom: 1.6rem;
+    width: 95%;
+  }
+}
+
+// * CLASSES USED WITH JAVASCRIPT *
+.hidden {
+  display: none;
 }

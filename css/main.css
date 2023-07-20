@@ -53,37 +53,43 @@ body {
 .card__image {
   max-width: 100%;
 }
-.card .FAQ {
-  max-width: 27.9rem;
+
+.FAQ {
+  width: 27.9rem;
 }
-.card .FAQ__header {
+.FAQ__header {
   color: hsl(238, 29%, 16%);
   font-size: 3.2rem;
   font-weight: 700;
   text-align: center;
   margin-bottom: 3.8rem;
 }
-.card .FAQ__QnA-container {
+.FAQ__QnA-container {
   border-bottom: 1px solid hsl(240, 5%, 91%);
 }
-.card .FAQ__QnA-container:not(:last-child) {
+.FAQ__QnA-container:not(:last-child) {
   margin-bottom: 1.9rem;
 }
-.card .FAQ__QnA-container__icon {
+.FAQ__QnA-container__icon {
   margin-left: auto;
 }
-.card .FAQ__question-container {
+.FAQ__question-container {
   display: flex;
   align-items: center;
   margin-bottom: 1.3rem;
 }
-.card .FAQ__question {
+.FAQ__question {
   color: hsl(237, 12%, 33%);
   font-size: 1.3rem;
 }
-.card .FAQ__answer {
+.FAQ__answer {
   color: hsl(240, 6%, 50%);
   font-size: 1.2rem;
   line-height: 1.8rem;
   margin-bottom: 1.6rem;
+  width: 95%;
+}
+
+.hidden {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
