@@ -1,3 +1,10 @@
+:root {
+  --color-text-bold: hsl(238, 29%, 16%);
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+  --color-question: hsl(237, 12%, 33%);
+}
+
 *,
 *::before,
 *::after {
@@ -67,8 +74,8 @@ body {
 .FAQ__QnA-container {
   border-bottom: 1px solid hsl(240, 5%, 91%);
 }
-.FAQ__QnA-container:not(:last-child) {
-  margin-bottom: 1.9rem;
+.FAQ__QnA-container:not(:first-of-type) {
+  padding-top: 1.9rem;
 }
 .FAQ__QnA-container__icon {
   margin-left: auto;
@@ -76,7 +83,7 @@ body {
 .FAQ__question-container {
   display: flex;
   align-items: center;
-  margin-bottom: 1.3rem;
+  margin-bottom: 1.9rem;
 }
 .FAQ__question {
   color: hsl(237, 12%, 33%);
@@ -86,7 +93,7 @@ body {
   color: hsl(240, 6%, 50%);
   font-size: 1.2rem;
   line-height: 1.8rem;
-  margin-bottom: 1.6rem;
+  margin: -0.6rem 0 1.6rem;
   width: 95%;
 }
 
