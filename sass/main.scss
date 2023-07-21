@@ -17,14 +17,6 @@ $font-primary: "Kumbh Sans", sans-serif;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
-// ************** ROOT *************
-:root {
-  --color-text-bold: #{$color-text-bold};
-  --font-weight-regular: #{$font-weight-regular};
-  --font-weight-bold: #{$font-weight-bold};
-  --color-question: #{$color-question};
-}
-
 // ************* BASE **************
 *,
 *::before,
@@ -45,9 +37,10 @@ body {
 
 // ********* MOBILE LAYOUT *********
 body {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: 14.8rem 0 8.5rem 0;
+  padding: 14.8rem 0 8.5rem;
   background: linear-gradient($color-gradient-start, $color-gradient-end);
   font-family: $font-primary;
 }
@@ -109,6 +102,7 @@ body {
 
     &__icon {
       margin-left: auto;
+      transition: all 0.3s;
     }
   }
 
@@ -135,4 +129,13 @@ body {
 // * CLASSES USED WITH JAVASCRIPT *
 .hidden {
   display: none;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+  color: $color-text-bold;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }

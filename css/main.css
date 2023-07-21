@@ -1,10 +1,3 @@
-:root {
-  --color-text-bold: hsl(238, 29%, 16%);
-  --font-weight-regular: 400;
-  --font-weight-bold: 700;
-  --color-question: hsl(237, 12%, 33%);
-}
-
 *,
 *::before,
 *::after {
@@ -23,9 +16,10 @@ body {
 }
 
 body {
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
-  padding: 14.8rem 0 8.5rem 0;
+  padding: 14.8rem 0 8.5rem;
   background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
   font-family: "Kumbh Sans", sans-serif;
 }
@@ -79,6 +73,7 @@ body {
 }
 .FAQ__QnA-container__icon {
   margin-left: auto;
+  transition: all 0.3s;
 }
 .FAQ__question-container {
   display: flex;
@@ -99,4 +94,13 @@ body {
 
 .hidden {
   display: none;
+}
+
+.bold {
+  font-weight: 700;
+  color: hsl(238, 29%, 16%);
+}
+
+.rotate {
+  transform: rotate(180deg);
 }/*# sourceMappingURL=main.css.map */

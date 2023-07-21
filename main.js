@@ -3,46 +3,33 @@ import "regenerator-runtime/runtime";
 
 // VARIABLES
 const faqContainer = document.querySelector(".FAQ");
-const colorTextBold = getComputedStyle(
-  document.documentElement
-).getPropertyValue("--color-text-bold");
-const fontWeightRegular = getComputedStyle(
-  document.documentElement
-).getPropertyValue("--font-weight-regular");
-const fontWeightBold = getComputedStyle(
-  document.documentElement
-).getPropertyValue("--font-weight-bold");
-const colorQuestion = getComputedStyle(
-  document.documentElement
-).getPropertyValue("--color-question");
+let qnaContainer;
 
-// ROTATE THE ARROW ICON
+// HELPER FUNCTIONS
+function toggleClass(cssClass, element) {
+  element.classList.toggle(cssClass);
+}
 
-// EVENT LISTENER
-faqContainer.addEventListener("click", function (e) {
-  const qnaContainer = e.target.closest(".FAQ__QnA-container");
+function querySelectElement(element) {
+  return qnaContainer.querySelector(element);
+}
+
+// EVENT LISTENER CALLBACK FUNCTION
+function handleQuestionClick(e) {
+  // REVEAL ANSWER
+  qnaContainer = e.target.closest(".FAQ__QnA-container");
   if (!qnaContainer) return;
-  const answer = qnaContainer.querySelector(".FAQ__answer");
-  answer.classList.toggle("hidden");
+  const answer = querySelectElement(".FAQ__answer");
+  toggleClass("hidden", answer);
 
   // MAKE THE QUESTION BOLD
-  const question = qnaContainer.querySelector(".FAQ__question");
-
-  if (question.style.fontWeight === fontWeightBold) {
-    question.style.fontWeight = fontWeightRegular;
-    question.style.color = colorQuestion;
-  } else {
-    question.style.fontWeight = fontWeightBold;
-    question.style.color = colorTextBold;
-    // WE COULD TOGGLE A CLASS HERE
-  }
+  const question = querySelectElement(".FAQ__question");
+  toggleClass("bold", question);
 
   // ROTATE ARROW ICON
-  const arrowIcon = qnaContainer.querySelector(".FAQ__QnA-container__icon");
-  if (arrowIcon.style.transform === "rotate(180deg)") {
-    arrowIcon.style.transform = "rotate(0)";
-  } else {
-    arrowIcon.style.transform = "rotate(180deg)";
-  }
-  // WE COULD TOGGLE A CLASS HERE AS WELL
-});
+  const arrowIcon = querySelectElement(".FAQ__QnA-container__icon");
+  toggleClass("rotate", arrowIcon);
+}
+
+// EVENT LISTENER
+faqContainer.addEventListener("click", handleQuestionClick);
