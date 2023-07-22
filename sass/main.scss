@@ -47,7 +47,7 @@ body {
 
 // ************** CARD *************
 .card {
-  max-width: 32.7rem;
+  max-width: 43.6rem;
   width: 87.2vw;
   background: $color-card-bg;
   display: flex;
@@ -84,7 +84,7 @@ body {
 
 // ******** FAQ CONTAINER ********
 .FAQ {
-  max-width: 27.9rem;
+  max-width: 37.2rem;
   width: 74.4vw;
 
   &__header {
@@ -111,7 +111,7 @@ body {
   &__question-container {
     display: flex;
     align-items: center;
-    margin-bottom: 1.9rem;
+    padding-bottom: 1.9rem;
   }
 
   &__question {
@@ -124,8 +124,28 @@ body {
     color: $color-answer;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    margin: -0.6rem 0 1.6rem;
+    margin: -0.6rem 0 0;
+    padding-bottom: 1.6rem;
     width: 95%;
+  }
+}
+
+// ********* DESKTOP LAYOUT ********
+
+// ******* 992px MEDIA QUERY *******
+@media (min-width: 62em) {
+  .FAQ {
+    &__QnA-container:hover {
+      cursor: pointer;
+    }
+
+    &__QnA-container:hover &__answer {
+      cursor: auto;
+    }
+
+    &__question:hover {
+      color: $color-question-hover;
+    }
   }
 }
 

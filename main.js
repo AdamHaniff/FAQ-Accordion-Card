@@ -19,6 +19,8 @@ function handleQuestionClick(e) {
   // REVEAL ANSWER
   qnaContainer = e.target.closest(".FAQ__QnA-container");
   if (!qnaContainer) return;
+  const questionContainer = e.target.closest(".FAQ__question-container");
+  if (!questionContainer) return;
   const answer = querySelectElement(".FAQ__answer");
   toggleClass("hidden", answer);
 

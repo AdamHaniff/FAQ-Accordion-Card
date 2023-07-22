@@ -25,7 +25,7 @@ body {
 }
 
 .card {
-  max-width: 32.7rem;
+  max-width: 43.6rem;
   width: 87.2vw;
   background: hsl(0, 0%, 100%);
   display: flex;
@@ -57,7 +57,7 @@ body {
 }
 
 .FAQ {
-  max-width: 27.9rem;
+  max-width: 37.2rem;
   width: 74.4vw;
 }
 .FAQ__header {
@@ -80,7 +80,7 @@ body {
 .FAQ__question-container {
   display: flex;
   align-items: center;
-  margin-bottom: 1.9rem;
+  padding-bottom: 1.9rem;
 }
 .FAQ__question {
   color: hsl(237, 12%, 33%);
@@ -91,10 +91,22 @@ body {
   color: hsl(240, 6%, 50%);
   font-size: 1.2rem;
   line-height: 1.8rem;
-  margin: -0.6rem 0 1.6rem;
+  margin: -0.6rem 0 0;
+  padding-bottom: 1.6rem;
   width: 95%;
 }
 
+@media (min-width: 62em) {
+  .FAQ__QnA-container:hover {
+    cursor: pointer;
+  }
+  .FAQ__QnA-container:hover .FAQ__answer {
+    cursor: auto;
+  }
+  .FAQ__question:hover {
+    color: hsl(14, 88%, 65%);
+  }
+}
 .hidden {
   display: none;
 }
