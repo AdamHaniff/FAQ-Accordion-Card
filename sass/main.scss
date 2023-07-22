@@ -48,6 +48,7 @@ body {
 // ************** CARD *************
 .card {
   max-width: 32.7rem;
+  width: 87.2vw;
   background: $color-card-bg;
   display: flex;
   flex-direction: column;
@@ -83,7 +84,8 @@ body {
 
 // ******** FAQ CONTAINER ********
 .FAQ {
-  width: 27.9rem;
+  max-width: 27.9rem;
+  width: 74.4vw;
 
   &__header {
     color: $color-text-bold;
@@ -115,6 +117,7 @@ body {
   &__question {
     color: $color-question;
     font-size: 1.3rem;
+    margin-right: 1rem;
   }
 
   &__answer {
@@ -137,5 +140,5 @@ body {
 }
 
 .rotate {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
