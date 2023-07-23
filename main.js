@@ -21,7 +21,7 @@ function handleQuestionClick(e) {
   if (!qnaContainer) return;
   const questionContainer = e.target.closest(".FAQ__question-container");
   if (!questionContainer) return;
-  const answer = querySelectElement(".FAQ__answer");
+  const answer = querySelectElement(".FAQ__answer-container");
   toggleClass("hidden", answer);
 
   // MAKE THE QUESTION BOLD

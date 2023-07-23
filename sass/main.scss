@@ -30,12 +30,12 @@ html {
   font-size: 62.5%;
 }
 
+// ********* MOBILE LAYOUT *********
 html,
 body {
   min-height: 100%;
 }
 
-// ********* MOBILE LAYOUT *********
 body {
   box-sizing: border-box;
   display: flex;
@@ -107,8 +107,7 @@ body {
   &__question-container {
     display: flex;
     align-items: center;
-    padding-bottom: 1.9rem;
-    padding-top: 1.9rem;
+    padding: 1.9rem 0;
 
     &.first {
       padding-top: 0;
@@ -121,17 +120,21 @@ body {
     margin-right: 1rem;
   }
 
+  &__answer-container {
+    margin: -0.6rem 0 0;
+    padding-bottom: 1.6rem;
+  }
+
   &__answer {
+    display: block;
+    width: 95%;
     color: $color-answer;
     font-size: 1.2rem;
     line-height: 1.8rem;
-    margin: -0.6rem 0 0;
-    padding-bottom: 1.6rem;
-    width: 95%;
   }
 }
 
-// ********* DESKTOP LAYOUT ********
+// *** HOVER STATES FOR DESKTOP ***
 
 // ******* 992px MEDIA QUERY *******
 @media (min-width: 62em) {
@@ -140,12 +143,51 @@ body {
       cursor: pointer;
     }
 
-    &__QnA-container:hover &__answer {
+    &__QnA-container:hover &__answer-container {
       cursor: auto;
     }
 
     &__question:hover {
       color: $color-question-hover;
+    }
+  }
+}
+
+// ****** 1440px MEDIA QUERY ******
+@media (min-width: 90em) {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    align-items: center;
+    padding: initial;
+  }
+
+  // ************* CARD ************
+  .card {
+    max-width: 92rem;
+    flex-direction: row;
+    align-items: initial;
+    padding: 6.5rem 9.5rem 8.3rem 0;
+    position: initial;
+
+    // *** CARD IMAGE CONTAINER ***
+    &__image--container {
+      width: 47.16rem;
+      height: 27.79rem;
+      position: initial;
+      top: initial;
+      transform: initial;
+
+      &::after {
+        content: "";
+        background-image: url("../images/bg-pattern-desktop.svg");
+        width: 96.4rem;
+        height: 56.8rem;
+        transform: initial;
+      }
     }
   }
 }
