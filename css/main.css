@@ -70,9 +70,6 @@ body {
 .FAQ__QnA-container {
   border-bottom: 1px solid hsl(240, 5%, 91%);
 }
-.FAQ__QnA-container:not(:first-of-type) {
-  padding-top: 1.9rem;
-}
 .FAQ__QnA-container__icon {
   margin-left: auto;
   transition: all 0.3s;
@@ -81,6 +78,10 @@ body {
   display: flex;
   align-items: center;
   padding-bottom: 1.9rem;
+  padding-top: 1.9rem;
+}
+.FAQ__question-container.first {
+  padding-top: 0;
 }
 .FAQ__question {
   color: hsl(237, 12%, 33%);
