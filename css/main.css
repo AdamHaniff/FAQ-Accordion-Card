@@ -124,6 +124,7 @@ body {
     width: 92rem;
     height: 50.9rem;
     flex-direction: row;
+    gap: 0.4rem;
     align-items: initial;
     padding: 6.5rem 9.5rem 8.3rem 0;
     overflow: hidden;
@@ -137,6 +138,7 @@ body {
     position: relative;
     top: 0.5rem;
     left: -8.3rem;
+    z-index: 1;
   }
   .card__image--container::before {
     content: "";
@@ -149,10 +151,24 @@ body {
     margin: 13.4rem 0 0 -1.2rem;
   }
   .card__image--container::after {
-    content: "";
     background-image: url("../images/bg-pattern-desktop.svg");
-    width: 96.4rem;
-    height: 56.8rem;
+    width: 96.6rem;
+    height: 94.5rem;
+    position: relative;
+    z-index: -1;
+    transform: translate(-51%, -77%);
+  }
+  .FAQ {
+    max-width: initial;
+    width: 35rem;
+  }
+  .FAQ__header {
+    text-align: left;
+    margin-bottom: 4.5rem;
+  }
+  .FAQ__question {
+    font-size: 1.4rem;
+    margin-right: initial;
   }
 }
 .hidden {
