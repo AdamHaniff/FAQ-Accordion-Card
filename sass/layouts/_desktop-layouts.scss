@@ -1,0 +1,91 @@
+// *** HOVER STATES FOR DESKTOP ***
+
+// ******* 992px MEDIA QUERY *******
+@media (min-width: 62em) {
+  .FAQ {
+    &__QnA-container:hover {
+      cursor: pointer;
+    }
+
+    &__QnA-container:hover &__answer-container {
+      cursor: auto;
+    }
+
+    &__question:hover {
+      color: $color-question-hover;
+    }
+  }
+}
+
+// ****** 1440px MEDIA QUERY ******
+@media (min-width: 90em) {
+  html,
+  body {
+    height: 100%;
+  }
+
+  body {
+    align-items: center;
+    padding: initial;
+  }
+
+  // ************* CARD ************
+  .card {
+    max-width: initial;
+    width: 92rem;
+    height: 50.9rem;
+    flex-direction: row;
+    gap: 0.4rem;
+    align-items: initial;
+    padding: 6.5rem 9.5rem 8.3rem 0;
+    overflow: hidden;
+
+    // *** CARD IMAGE CONTAINER ***
+    &__image--container {
+      max-width: initial;
+      max-height: initial;
+      width: 47.2rem;
+      height: 35.9rem;
+      transform: initial;
+      position: relative;
+      top: 0.5rem;
+      left: -8.3rem;
+      z-index: 1;
+
+      &::before {
+        content: "";
+        display: block;
+        background-image: url("../images/illustration-box-desktop.svg");
+        width: 19.1rem;
+        height: 18.4rem;
+        position: fixed;
+        margin: 13.4rem 0 0 -1.2rem;
+      }
+
+      &::after {
+        background-image: url("../images/bg-pattern-desktop.svg");
+        width: 96.6rem;
+        height: 94.5rem;
+        position: relative;
+        z-index: -1;
+        transform: translate(-51%, -77%);
+      }
+    }
+  }
+
+  // ******** FAQ CONTAINER ********
+  .FAQ {
+    max-width: initial;
+    width: 35rem;
+
+    &__header {
+      text-align: left;
+      margin-bottom: 4.5rem;
+    }
+
+    &__question {
+      font-size: 1.4rem;
+      margin-right: initial;
+    }
+  }
+}

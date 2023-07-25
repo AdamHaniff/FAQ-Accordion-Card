@@ -1,0 +1,13 @@
+// * CLASSES USED WITH JAVASCRIPT *
+.hidden {
+  display: none;
+}
+
+.bold {
+  font-weight: $font-weight-bold;
+  color: $color-text-bold;
+}
+
+.rotate {
+  transform: rotate(-180deg);
+}
